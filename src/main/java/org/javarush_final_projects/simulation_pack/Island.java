@@ -70,7 +70,7 @@ public class Island {
                 totalAnimals += loc.getAnimals().size();
             }
         }
-        String stats = "Total animals: " + totalAnimals +
+        String stats = "\nTotal animals: " + totalAnimals +
                 ", Born last tick: " + bornLastTick +
                 ", Died last tick: " + diedLastTick;
         resetTickStats();
@@ -78,12 +78,14 @@ public class Island {
     }
 
     private void populateAnimals() {
-        for (Map.Entry<String, Integer> entry : config.initialAnimalCounts.entrySet()) {
-            for (int i = 0; i < entry.getValue(); i++) {
-                int x = random.nextInt(config.width);
-                int y = random.nextInt(config.height);
-                Location loc = getLocation(x, y);
-                loc.addAnimal(AnimalFactory.create(entry.getKey()));
+        for (Location[] row : map) {
+            for (Location loc : row) {
+                for (Map.Entry<String, Integer> entry : config.initialAnimalCounts.entrySet()) {
+                    int count = random.nextInt(entry.getValue() + 1);
+                    for (int i = 0; i < count; i++) {
+                        loc.addAnimal(AnimalFactory.create(entry.getKey()));
+                    }
+                }
             }
         }
     }
