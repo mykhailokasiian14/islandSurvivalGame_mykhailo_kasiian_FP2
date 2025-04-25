@@ -5,7 +5,7 @@ import java.util.Map;
 class Config {
     int width;
     int height;
-    int tickDuration = 100; // в ms
+    int tickDuration = 300; // в ms
     Map<String, Integer> initialAnimalCounts = Map.ofEntries(
             Map.entry("Wolf", 30),
             Map.entry("Boa", 20),
