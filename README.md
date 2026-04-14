@@ -6,3 +6,4 @@ The project models interactions between different species (predators, herbivores
 The simulation uses concurrent processing (thread pools) to handle the lifecycle of organisms across a grid-based island. It also includes configurable parameters such as island size, initial population, and simulation timing, making the system flexible and extensible.
 
 Important: if you want to try how it works just be ready that the simulation can take some time!
+/ Was developed as a study project at JavaRush University to check Java Core knowledge / 
