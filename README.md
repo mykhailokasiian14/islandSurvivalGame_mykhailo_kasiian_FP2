@@ -1,6 +1,8 @@
-Проєкт islandSurvivalGame симулює життя тварин на острові.
+🏝️ Island Simulation
 
-Хочу сказати найголовнше: буває дуже багато випадків, коли програма може дуже довго працювати,
-через те, що тварини довго бігають по карті та довго помирають від голоду.
+A multithreaded island ecosystem simulation written in Java, based on OOP principles. 
+The project models interactions between different species (predators, herbivores, and plants), including movement, feeding, reproduction, and death.
 
-Постарався виконати основні вимоги, якщо що готовий до виправлень☺
+The simulation uses concurrent processing (thread pools) to handle the lifecycle of organisms across a grid-based island. It also includes configurable parameters such as island size, initial population, and simulation timing, making the system flexible and extensible.
+
+Important: if you want to try how it works just be ready that the simulation can take some time!
